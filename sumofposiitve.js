@@ -19,3 +19,7 @@ function positiveSum(arr) {
 arr = [1, -2, 3, 4, 5]
 
 console.log(positiveSum(arr))
+
+//What did I learn
+//declare variables
+//i is just the posiiton of the number in the array, not the number itself 
