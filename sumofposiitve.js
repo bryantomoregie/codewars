@@ -23,3 +23,8 @@ console.log(positiveSum(arr))
 //What did I learn
 //declare variables
 //i is just the posiiton of the number in the array, not the number itself 
+//in for loop we need 3 statements
+//1st initial expression 
+//2nd condition. Loop will run as long as condition evaluates to true 
+//3rd increment expression 
+
