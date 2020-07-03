@@ -15,3 +15,8 @@ function friend(friends) {
     }
     return arr
 }
+
+//isNaN() evaluates to true if input is not a number 
+//people look like they use .filter to filter out what doesnt evaluate to true in the array
+//no loop
+//O(n)
