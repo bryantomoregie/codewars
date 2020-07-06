@@ -26,3 +26,7 @@ console.log(isIsogram("caty"))
 
 //passed by value boolean, integer, string  primitives
 //passed by reference array, object non-primitives
+
+//var, let, const 
+//var is a functional scope, let and const are block scope
+//none make variable global scope

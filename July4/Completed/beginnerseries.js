@@ -24,3 +24,6 @@ function getSum( a,b ) {
 
 
 console.log(getSum(5, 3)) // 3 + 4 + 5 // 12
+
+//to find the range you start at lower and add the index to each iteration 
+//total is being increased with each iteration

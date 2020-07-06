@@ -39,3 +39,7 @@ const highAndLow = numbers => {
 
 console.log(highAndLow(numbers))
 
+//array.sort((a, b) => a - b) will arrange the array in ascending order
+// to find the lowest number do arr[0]
+//to find the highest number do arr[arr.length -1]
+//you can interpolate those number in using dollar sign back ticks
