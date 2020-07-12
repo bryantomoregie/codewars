@@ -1,16 +1,19 @@
+function createFrequencyCountObject(str){
+    // return [...str].reduce((a, b) => ({...a, [b]: (a[b] || 0) + 1}), {});
+    let obj = {};
+    for (let val of str) {
+        obj[val] = (obj[val] || 0) + 1;
+    }
+    return obj;
+}
+
 function validAnagram(str1, str2) {
-    let arr1 = str1.split('')
-    let arr2 = str2.split('')
+    if (str1.length !== str2.length) return false; //guarding statement
 
-    let object1 = {}
-    let object2 = {}
+    let object1 = createFrequencyCountObject(str1);
+    let object2 = createFrequencyCountObject(str2);
 
-    for (let val of arr1) {
-        object1[val] = (object1[val] || 0) + 1
-    }
-    for (let val of arr2) {
-        object2[val] = (object2[val] || 0) + 1
-    }
+    // console.log(object1, object2);
 
     for (let key in object1) {
         if (!(key in object2)) {
@@ -18,15 +21,22 @@ function validAnagram(str1, str2) {
         }
         else if (object2[key] !== object1[key]) {
             return false
-        } else {
-            return true
-        }
+        } 
     }
+    return true
 }
 
-console.log(object1, object2)
-}
-x = 'anagram'
-y = 'margana'
-console.log(validAnagram(x, y))
+console.log( validAnagram('anagrag', 'marganz') === false )
 
+console.log(validAnagram('abbccdd', 'babcdcd') === true) //should be true
+console.log(validAnagram('aaaaab', 'bbbbba') === false) // should be false
+console.log(validAnagram('anagram', 'gramana') === true)
+console.log(validAnagram('head', 'hide') === false)
+
+//guard statement
+//create helper method, abstraction
+//when using a for loop, consider if theres an already made array method that can accomplish that task
+//functions signature is the number and type of the inputs and the type of the output
+
+//hwk: look up forEach, map, filter, reduce methods on array
+//hwk: continue working on portfolio

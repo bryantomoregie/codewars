@@ -11,8 +11,7 @@ function nbYear(p0, percent, aug, p) {
         console.log(p0)
         nbYear(p0, percent, aug, p);
     }
-    return rounds
-   
+    return rounds   
 }
 
 console.log(nbYear(1000, 2, 50, 1200))
