@@ -27,6 +27,8 @@ function sameFrequency(int1, int2) {
         obj2[val] = (obj2[val] || 0) + 1;
     }
 
+    
+
     for (let key in obj1) {
         if (!(key in obj2)) {
             return false;
@@ -37,6 +39,8 @@ function sameFrequency(int1, int2) {
             return true;
         }
     }
+
+  
 }
 
 console.log(sameFrequency(1864, 4391))
