@@ -8,15 +8,14 @@ function isValidWalk(walk) {
         obj[walk[i]] = (obj[walk[i]] || 0) + 1;
     }
 
-    if ((Object.keys(obj).length === 2) && (obj.n === obj.s)) return true;
-    if ((Object.keys(obj).length === 4) && (obj.e === obj.w)) return true; 
+    if (obj.n === obj.s && obj.e === obj.w) return true
 
     return false 
   
   }
 
 
-console.log(isValidWalk(['n','s','n','s','e','w','e','w','e','e'])) //true;
+console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s'])) //true;
 
 
 //check to see if all the values are equal 
