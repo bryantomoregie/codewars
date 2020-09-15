@@ -12,7 +12,7 @@ function validAnagram (str1, str2){
     }
 
     for(let key in obj1){
-        if(obj2[key] && obj2[key] === obj1[key]){
+        if(obj2[key] === obj1[key]){
             continue 
         } else {
             return false 
@@ -21,4 +21,4 @@ function validAnagram (str1, str2){
      return true 
 }
 
-console.log(validAnagram('anagram', 'margana'))
+console.log(validAnagram('anagram', 'margan'))
