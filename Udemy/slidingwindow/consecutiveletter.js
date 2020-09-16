@@ -74,7 +74,7 @@ console.log(minSubArrayLen(arr, int))
 We're keeping track of total, which is the total of all these numbers.
 We're keeping track of the first index of this subarray, the last index of this subarray,
 and the length of this subarray. 
-While start i s less than length, meaning we're going all the way through this array. 
+While start is less than length, meaning we're going all the way through this array. 
 If total amount added up so far is not equal to sum and end index has not reached the end, 
 add nums[end] to total and increment end
 We're doing this until we are equal to or greater then sum

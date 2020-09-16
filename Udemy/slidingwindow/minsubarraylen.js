@@ -3,17 +3,30 @@
 
 function minSubArrayLen(arr, int) {
 
-    let j = 0
-    let beginningOfArray = 0;
-    let endOfArray = 0;
-    
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] === int){
-            beginningOfArray = i 
-        } else {
-            
-        }
-    }
+ let total = 0;
+ let start= 0;
+ let end = 0;
+ let minLen = Infinity;
+
+ while (start < arr.length) {
+     if (total < int && end < arr.length){
+        total += arr[end]
+        end++
+     }
+
+     else if (total >= int){
+        minLen = Math.min(minLen, end-start)
+        total -= arr[start]
+        start++
+     }
+
+     else {
+         break
+     }
+ }
+
+ return minLen === Infinity ? 0 : minLen;
+
 }
 
 let arr = [2, 3, 1, 2, 4, 3]
