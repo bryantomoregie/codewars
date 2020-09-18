@@ -1,0 +1,56 @@
+<style>
+  .class {
+  }
+​
+  #outside {
+    margin: auto;
+    margin-top: 45px;
+    width: 40%;
+    height: 350px;
+    background-color: black;
+    position: relative;
+    color: white;
+    text-align: center;
+  }
+​
+  #middle {
+    width: 60%;
+    height: 60%;
+    background-color: grey;
+    position: relative;
+    top: 20%;
+    left: 20%;
+    color: white;
+  }
+​
+  #inside {
+    width: 50%;
+    height: 10%;
+    background-color: white;
+    position: relative;
+    margin: auto;
+    margin-top: 1px;
+    top: 25%;
+    color: black;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+</style>
+<div class="square" id="outside">
+  Div 1
+  <div class="square" id="middle">
+    Div 2
+    <div class="square" id="inside">Div 3</div>
+  </div>
+</div>
+​
+<script>
+  const squares = document.querySelectorAll(".square");
+​
+  squares.forEach((square, id) => {
+    square.addEventListener("click", (event) => {
+      event.stopPropagation();
+      alert(square.id);
+    });
+  });
+</script>
