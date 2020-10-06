@@ -80,13 +80,39 @@ class SinglyLinkedList {
             node = node.next
             counter--
         }
-        return node.val
+        return node
     }
 
     set(val, index){
         if (!this.get(index)) return false;
         this.get(index) = val
     }
+
+    insert(val, index){
+        if(index < 0 || index > this.length) return false;
+        if(index === this.length){
+            this.push(val)
+        }
+        if(index === 0){
+            this.unshift(val)
+        }
+
+        let newNode = new Node(val);
+        let previous = this.get(index - 1);
+        let temp = previous.next;
+        previous.next = newNode;
+        newNode.next = temp;
+        this.length++
+        return true
+    }
+
+    reverse(){
+
+    }
+    /*
+    turn the head in to the tail
+    
+    */
 }
 
 let bryant = new Node(29)
@@ -101,4 +127,4 @@ list.push(bryant)
 list.push(chelsey)
 list.push(caydence)
 
-console.log(list.set(90, 2))
+console.log(list)
