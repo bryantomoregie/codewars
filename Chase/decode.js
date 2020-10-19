@@ -25,7 +25,7 @@ Test Input
 Expected Output
 3
 */
-//uodated
+//updated
 function decode(integer) {
     let stringNum = integer.toString();
     let firstDigit = 0;
