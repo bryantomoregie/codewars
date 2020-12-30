@@ -1,14 +1,7 @@
 function validAnagram(str1, str2) {
-    let object1 = {}
-    let object2 = {}
 
-    for(let val of str1 ){
-        object1[val] = (object1[val] || 0) + 1
-    }
-
-    for(let val of str2){
-        object2[val] = (object1[val] || 0) + 1
-    }
+   let object1 = hashMap(str1)
+   let object2 = hashMap(str2)
 
     for (let key in object1)
     if (!(key in object2)) {
@@ -20,6 +13,13 @@ function validAnagram(str1, str2) {
     return true 
 }
 
+function hashMap(string){
+    let object1 = {};
+    for(let val of string ){
+        object1[val] = (object1[val] || 0) + 1
+    }
+    return object1;
+}
 
 
-console.log(validAnagram("this", "shit"))
+console.log(validAnagram("thiss", "shit"))
