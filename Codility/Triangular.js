@@ -2,7 +2,7 @@
 
 function solution(A) {
     A.sort((a, b) => a-b)
-
+    if(A.length < 3) return 0;
     if (A.length == 3){
         if(A[0] + A[1] > a[2]){
             return 1
