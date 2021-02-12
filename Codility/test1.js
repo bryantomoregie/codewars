@@ -41,6 +41,7 @@ function solution(A){
     let int = arr[0]
     let length = arr.length
 
+    console.log(A, A[length - 1])
     if(arr[length - 1] < 0) {
         return 1 }
     
@@ -58,9 +59,10 @@ function solution(A){
 let A = [1, 3, 6, 4, 1, 2]
 console.log(solution(A))
 
-/*
-order the array 
-1, 1, 2, 3, 4, 6
-firstInt = array[0]
-if array
-*/
+
+function solution(A) {
+  for (i = 1; i <= 100000; i++) {
+    if(!A.includes(i)) return i;
+  }
+  return 100001
+}

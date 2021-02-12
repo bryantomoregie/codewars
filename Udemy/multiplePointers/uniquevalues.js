@@ -41,5 +41,23 @@ function countUniqeValues(arr){
     return i + 1
 }
 
-console.log(countUniqeValues([1,1,1,2]))
+function countUniqueValue(arr){
+    let point1 = 0;
+    let point2 = 1;
+    
+    while( point2 < arr.length){
+        if(arr[point1] == arr[point2]){
+            point2++
+        }
+        else if(arr[point1] != arr[point2]){
+            point1++
+            arr[point1] = arr[point2]
+        }
+        
+    }
+    
+    return point1 + 1
+}
+
+console.log(countUniqeValue([1,1,1,2]))
                             

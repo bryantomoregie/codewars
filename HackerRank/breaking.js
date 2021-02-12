@@ -2,20 +2,32 @@
 
 
 function breakingRecords(scores) {
-    let lowNumber = 0
-    let lowCounter = 0
+    let lowNumber = scores[0];
+    let lowCounter = 0;
 
-    let highNumber = scores[0]
-    let highCounter = 0
+    let highNumber = scores[0];
+    let highCounter = 0;
+
 
     for(let int of scores){
-        
+        if(int > highNumber) {
+            highNumber = int;
+            highCounter++;
+        }
+        else if(int < lowNumber){
+            lowNumber = int;
+            lowCounter++;
+        } else{
+            continue;
+        }
     }
+
+    return new Array(highCounter, lowCounter)
 
 }
 
 
-let scores = [12, 24, 10, 24]
+let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
 
 console.log(breakingRecords(scores));
 
